@@ -1,0 +1,7 @@
+#Instructions from: https://rancher.com/docs/rancher/v2.x/en/backups/v2.5/docker-installs/docker-backups/
+
+docker stop wonderful_keller  #<RANCHER_CONTAINER_NAME>
+
+docker create --volumes-from wonderful_keller --name rancher-data-10-24-2020 rancher/rancher:master-e9a98a32389e589921e5fef79011a9df356b02ea-linux-arm64
+
+docker run  --volumes-from rancher-data-10-24-2020 -v $PWD:/backup:z busybox tar pzcvf /backup/rancher-data-backup-2.0-10-24-2020.tar.gz /var/lib/rancher
