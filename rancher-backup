@@ -1,7 +1,6 @@
 #Instructions from: https://rancher.com/docs/rancher/v2.x/en/backups/v2.5/docker-installs/docker-backups/
 
 docker ps
-
 #example output
 CONTAINER ID        IMAGE                                                                         COMMAND                  CREATED             STATUS              PORTS                                      NAMES
 5f38ea16e71b        rancher/rancher:master-e9a98a32389e589921e5fef79011a9df356b02ea-linux-arm64   "entrypoint.sh"          43 hours ago        Up 24 hours         0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp   wonderful_keller
