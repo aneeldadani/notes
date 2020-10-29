@@ -10,3 +10,5 @@ docker stop <RANCHER_CONTAINER_NAME>
 docker create --volumes-from <RANCHER_CONTAINER_NAME> --name rancher-data-<DATE> rancher/rancher:master-e9a98a32389e589921e5fef79011a9df356b02ea-linux-arm64
 
 docker run  --volumes-from rancher-data-<DATE> -v $PWD:/backup:z busybox tar pzcvf /backup/rancher-data-backup-2.0-<DATE>.tar.gz /var/lib/rancher
+
+docker start <RANCHER_CONTAINER_NAME>
