@@ -2,12 +2,12 @@
 
 docker ps
 #example output
-CONTAINER ID        IMAGE                                                                         COMMAND                  CREATED             STATUS              PORTS                                      NAMES
-5f38ea16e71b        rancher/rancher:master-e9a98a32389e589921e5fef79011a9df356b02ea-linux-arm64   "entrypoint.sh"          43 hours ago        Up 24 hours         0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp   wonderful_keller
+CONTAINER ID        IMAGE       COMMAND                  CREATED             STATUS              PORTS                                      NAMES
+[ID]                [Image]    "entrypoint.sh"          43 hours ago        Up 24 hours         0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp   [Name]
 
 docker stop <RANCHER_CONTAINER_NAME>
 
-docker create --volumes-from <RANCHER_CONTAINER_NAME> --name rancher-data-<DATE> rancher/rancher:master-e9a98a32389e589921e5fef79011a9df356b02ea-linux-arm64
+docker create --volumes-from <RANCHER_CONTAINER_NAME> --name rancher-data-<DATE> <Image>
 
 docker run  --volumes-from rancher-data-<DATE> -v $PWD:/backup:z busybox tar pzcvf /backup/rancher-data-backup-2.0-<DATE>.tar.gz /var/lib/rancher
 
