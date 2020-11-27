@@ -1,0 +1,14 @@
+#launching a Vagrant Ubuntu 18.04 system
+vagrant init ubuntu/bionic64
+
+#Output will look like this:
+#A `Vagrantfile` has been placed in this directory. You are now
+#ready to `vagrant up` your first virtual environment! Please read
+#the comments in the Vagrantfile as well as documentation on
+#`vagrantup.com` for more information on using Vagrant.
+
+#start Vagrant system
+vagrant up
+
+#SSH to system
+vagrant ssh
