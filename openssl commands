@@ -1,0 +1,2 @@
+#Create self-signed certificate and new private key from scratch:
+openssl req -nodes -newkey rsa:2048 -keyout example.key -out example.crt -x509 -days 365
