@@ -1,2 +1,0 @@
-#running ansible playbook command with vault id 
-ansible-playbook playbook.yaml -i hosts.yaml --vault-id user@prompt --check
