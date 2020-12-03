@@ -1,0 +1,8 @@
+#Setting up a virtulenv
+virtualenv --python=python3 sample-name
+
+#Activating virtualenv
+source sample-name/bin/activate
+
+#Close virtualenv
+deactivate
