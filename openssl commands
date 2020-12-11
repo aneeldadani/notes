@@ -1,2 +1,13 @@
-#Create self-signed certificate and new private key from scratch:
-openssl req -nodes -newkey rsa:2048 -keyout example.key -out example.crt -x509 -days 365
+#Check if openssl is available, output should look like this: /usr/bin/openssl
+which openssl
+
+#openssl command to run with explanation of each flag
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/example.com.key -out /etc/ssl/certs/example.com.pem
+
+#req: This subcommand is used for creating a new X.509 cert. The "X.509" is a public key infrastructure standard that SSL and TLS adhere to for its key and certificate management.
+#-x509: This further modifies the previous subcommand by telling the utility that we want to make a self-signed certificate.
+#-nodes: This is used to skip the passphrase option to secure our certificate.
+#-days 365: This option sets the validity for the certificate in days. We are setting it for a year here.
+#-newkey rsa:2048: This specifies that we want to generate a new RSA key with 2048 bits long along with the certificate.
+#-keyout: This option tells OpenSSL where to place the generated private key file.
+#-out: This option tells OpenSSL where to place the generated certificate.
