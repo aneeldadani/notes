@@ -10,3 +10,5 @@ docker rmi $(docker images -q)
 #remove all docker volumes
 docker volume ls -qf dangling=true | xargs -r docker volume rm
 
+#watching pods live
+watch -n 1 kubectl get  pod -A
